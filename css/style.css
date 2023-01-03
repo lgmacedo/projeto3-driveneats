@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+
+.Righteous{
+    font-family: 'Righteous', cursive;
+}
+
+.Roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+header{
+    height: 92px;
+    background-color: #CF2B2B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: drop-shadow(0px 3px 3px #979696);
+    position: fixed;
+    width: 100%;
+}
+
+header h1, header h2{
+    margin-left: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+header h1{
+    font-weight: 400;
+    font-size: 44px;
+    margin-top: 18px;
+}
+
+header h2{
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+main{
+    padding-top: 123px;
+}
+
+main h3{
+    font-weight: 400;
+    padding-left: 21px;
+    font-size: 26px;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 27px;
+    padding-left: 19px;
+    padding-right: 19px;
+    overflow-x: scroll;
+}
+
+.opcoes div{
+    height: 216px;
+    width: 172px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    margin-right: 16px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.opcoes div img, .opcoes div p{
+    width: 144px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.opcoes div img{
+    margin-top: 18px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.opcoes div p:nth-child(2){
+    color: #333333;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.opcoes div p:nth-child(3){
+    color: #a6a6a6;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 17.58px;
+}
+
+.opcoes div p:nth-child(4){
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 13px;
+}
+
+.fix1{
+    margin-bottom: 105px;
+}
+
+footer{
+    height: 92px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.selecione3itens{
+    width: 364px;
+    height: 61px;
+    margin: auto auto;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.selecione3itens p{
+    width: 200px;
+    color: #ffffff;
+}
