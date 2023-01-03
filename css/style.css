@@ -62,6 +62,12 @@ main h3{
     padding-left: 19px;
     padding-right: 19px;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.opcoes::-webkit-scrollbar{
+    display: none;
 }
 
 .opcoes div{
