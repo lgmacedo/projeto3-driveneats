@@ -142,7 +142,7 @@ footer{
     width: 100%;
 }
 
-.selecione3itens{
+footer button{
     width: 364px;
     height: 61px;
     margin: auto auto;
@@ -154,9 +154,10 @@ footer{
     align-items: center;
     font-weight: 400;
     font-size: 20px;
+    border: none;
 }
 
-.selecione3itens p{
+footer button p{
     width: 200px;
     color: #ffffff;
 }
@@ -167,6 +168,15 @@ footer{
 
 .checkVerde{
     color: #32b72f;
+}
+
+.backgroundVerdeClicavel{
+    background-color: #32b72f;
+    cursor: pointer;
+}
+
+.backgroundVermelho{
+    background-color: red;
 }
 
 
