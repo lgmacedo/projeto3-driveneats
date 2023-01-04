@@ -18,66 +18,75 @@
     </header>
     <main>
         <h3 class="Righteous">Primeiro, seu prato</h3>
-        <div class="opcoes Roboto">
-            <div>
+        <div class="pratos opcoes Roboto">
+            <div onclick="marcaPrato(1)">
                 <img src="./img/frango_yin_yang.png">
                 <p>Frango Yin Yang</p>
                 <p>Um pouco de batata, um pouco de salada</p>
                 <p>R$ 14,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaPrato(2)">
                 <img src="./img/hamburguer.jpg">
                 <p>Hamburguer</p>
                 <p>Acompanha porção de fritas</p>
                 <p>R$ 16,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaPrato(3)">
                 <img src="./img/sushi.jpg.webp">
                 <p>Sushi</p>
                 <p>Combinado de 9 peças</p>
                 <p>R$ 24,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
         <h3 class="Righteous">Agora, sua bebida</h3>
-        <div class="opcoes Roboto">
-            <div>
+        <div class="bebidas opcoes Roboto">
+            <div onclick="marcaBebida(1)">
                 <img src="./img/coca-cola.png">
                 <p>Coquinha gelada</p>
                 <p>Lata 350ml</p>
                 <p>R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaBebida(2)">
                 <img src="./img/milkshake.jpg">
                 <p>Milkshake</p>
                 <p>Sabor chocolate, 300ml</p>
                 <p>R$ 6,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaBebida(3)">
                 <img src="./img/suco.jpg">
                 <p>Suco natural</p>
                 <p>Sabor laranja, 400ml</p>
                 <p>R$ 5,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
         <h3 class="Righteous">Por fim, sua sobremesa</h3>
-        <div class="opcoes Roboto fix1">
-            <div>
+        <div class="sobremesas opcoes Roboto fix1">
+            <div onclick="marcaSobremesa(1)">
                 <img src="./img/pudim.png">
                 <p>Pudim</p>
                 <p>Apenas pudim</p>
                 <p>R$ 7,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaSobremesa(2)">
                 <img src="./img/brownie.png">
                 <p>Brownie no pote</p>
                 <p>Escolha o seu sabor</p>
                 <p>R$ 11,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div>
+            <div onclick="marcaSobremesa(3)">
                 <img src="./img/sorvete.jpg.webp">
                 <p>Sorvete</p>
                 <p>Escolha o seu sabor</p>
                 <p>R$ 9,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </div>
     </main>
@@ -86,6 +95,7 @@
             <p>Selecione os 3 itens para fechar o pedido</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
