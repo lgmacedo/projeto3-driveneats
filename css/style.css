@@ -208,6 +208,8 @@ footer button p{
     align-items: center;
     color: #ffffff;
     padding: 25px;
+
+    filter: drop-shadow(4px 4px 3px #979696);
 }
 
 .confirmePedido{
@@ -215,23 +217,7 @@ footer button p{
     font-size: 22px;
 }
 
-.item1{
-    display: flex;
-    justify-content: space-between;
-    min-width: 100%;
-    font-weight: 400;
-    font-size: 22px;
-}
-
-.item2{
-    display: flex;
-    justify-content: space-between;
-    min-width: 100%;
-    font-weight: 400;
-    font-size: 22px;
-}
-
-.item3{
+.item1, .item2, .item3{
     display: flex;
     justify-content: space-between;
     min-width: 100%;
