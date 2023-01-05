@@ -10,7 +10,11 @@ let valorPrato = 0;
 let valorBebida = 0;
 let valorSobremesa = 0;
 
+let nomeCliente = "";
+let endCliente = "";
+
 let valorFinal = 0;
+let valorFinalCorrigido = 0;
 
 function terminouPedido(){
     if((pratoSelecionado !== 0) && (bebidaSelecionada !== 0) && (sobremesaSelecionada !== 0)){
@@ -65,8 +69,8 @@ function marcaPrato(numPrato){
     }
 }
 
-function marcaBebida(numPrato){
-    if (numPrato === 1){
+function marcaBebida(numBebida){
+    if (numBebida === 1){
         document.querySelector(".bebidas>div:nth-child(2)").classList.remove('bordaVerde');
         document.querySelector(".bebidas>div:nth-child(2) ion-icon").classList.remove('checkVerde');
 
@@ -80,7 +84,7 @@ function marcaBebida(numPrato){
         valorBebida = 4.90;
         terminouPedido();
 
-    } else if (numPrato === 2){
+    } else if (numBebida === 2){
         document.querySelector(".bebidas>div:nth-child(1)").classList.remove('bordaVerde');
         document.querySelector(".bebidas>div:nth-child(1) ion-icon").classList.remove('checkVerde');
 
@@ -94,7 +98,7 @@ function marcaBebida(numPrato){
         valorBebida = 6.90;
         terminouPedido();
 
-    } else if (numPrato === 3){
+    } else if (numBebida === 3){
         document.querySelector(".bebidas>div:nth-child(1)").classList.remove('bordaVerde');
         document.querySelector(".bebidas>div:nth-child(1) ion-icon").classList.remove('checkVerde');
 
@@ -110,8 +114,8 @@ function marcaBebida(numPrato){
     }
 }
 
-function marcaSobremesa(numPrato){
-    if (numPrato === 1){
+function marcaSobremesa(numSobremesa){
+    if (numSobremesa === 1){
         document.querySelector(".sobremesas>div:nth-child(2)").classList.remove('bordaVerde');
         document.querySelector(".sobremesas>div:nth-child(2) ion-icon").classList.remove('checkVerde');
 
@@ -125,7 +129,7 @@ function marcaSobremesa(numPrato){
         valorSobremesa = 7.90;
         terminouPedido();
 
-    } else if (numPrato === 2){
+    } else if (numSobremesa === 2){
         document.querySelector(".sobremesas>div:nth-child(1)").classList.remove('bordaVerde');
         document.querySelector(".sobremesas>div:nth-child(1) ion-icon").classList.remove('checkVerde');
 
@@ -139,7 +143,7 @@ function marcaSobremesa(numPrato){
         valorSobremesa = 11.90;
         terminouPedido();
 
-    } else if (numPrato === 3){
+    } else if (numSobremesa === 3){
         document.querySelector(".sobremesas>div:nth-child(1)").classList.remove('bordaVerde');
         document.querySelector(".sobremesas>div:nth-child(1) ion-icon").classList.remove('checkVerde');
 
@@ -156,9 +160,37 @@ function marcaSobremesa(numPrato){
 }
 
 function fecharPedido(){
+    document.querySelector('.whiteCover').classList.toggle('escondido');
+    document.querySelector('.caixinhaVerde').classList.toggle('escondido');
+
+    nomeCliente = prompt("Insira o seu nome:");
+    endCliente = prompt("Agora, insira seu endereço:");
     valorFinal = valorPrato + valorBebida + valorSobremesa;
-    const valorFinalCorrigido = valorFinal.toFixed(2);
-    const mensagem = "Olá, gostaria de fazer o pedido: \n- Prato: "+nomePrato+"\n- Bebida: "+nomeBebida+"\n- Sobremesa: "+nomeSobremesa+" \nTotal: R$ "+valorFinalCorrigido;
+    valorFinalCorrigido = valorFinal.toFixed(2);
+
+    document.querySelector('.item1>p').innerHTML = `${nomePrato}`;
+    valorPrato = valorPrato.toFixed(2);
+    document.querySelector('.item1 p:nth-child(2)').innerHTML = `R$ ${(valorPrato.toString()).replace(".", ",")}`;
+
+    document.querySelector('.item2>p').innerHTML = `${nomeBebida}`;
+    valorBebida = valorBebida.toFixed(2);
+    document.querySelector('.item2 p:nth-child(2)').innerHTML = `R$ ${(valorBebida.toString()).replace(".", ",")}`;
+
+    document.querySelector('.item3>p').innerHTML = `${nomeSobremesa}`;
+    valorSobremesa = valorSobremesa.toFixed(2);
+    document.querySelector('.item3 p:nth-child(2)').innerHTML = `R$ ${(valorSobremesa.toString()).replace(".", ",")}`;
+
+    valorFinal = valorFinal.toFixed(2);
+    document.querySelector('.total p:nth-child(2)').innerHTML = `R$ ${(valorFinal.toString()).replace(".", ",")}`;
+
+}
+
+function fecharPedido2(){
+    const mensagem = "Olá, gostaria de fazer o pedido: \n- Prato: "+nomePrato+"\n- Bebida: "+nomeBebida+"\n- Sobremesa: "+nomeSobremesa+" \nTotal: R$ "+valorFinalCorrigido+"\n \nNome: "+nomeCliente+"\nEndereço: "+endCliente;
     const mensagemCorrigida = encodeURIComponent(mensagem);
     open("https://wa.me/5532998382271?text="+mensagemCorrigida);
+}
+
+function cancelarPedido(){
+    location.reload();
 }

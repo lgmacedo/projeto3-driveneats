@@ -175,4 +175,97 @@ footer button p{
     cursor: pointer;
 }
 
+.escondido{
+    display: none;
+}
+
+.whiteCover{
+    z-index: 2;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    opacity: 0.9;
+}
+
+.fix2{
+    background-color: #50D074;
+    width: 377px;
+    height: 353px;
+    border-radius: 9px;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    padding: 25px;
+}
+
+.confirmePedido{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.item1{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.item2{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.item3{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.tudoCerto{
+    font-weight: 700;
+    font-size: 22px;
+    color: #50D074;
+    background-color: #ffffff;
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cancelar{
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 
