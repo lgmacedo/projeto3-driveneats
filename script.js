@@ -24,7 +24,7 @@ function terminouPedido(){
     }
 }
 
-function marcaPrato(numPrato){
+function marcaPrato(qualPrato){
     pratoSelecionado = true;
 
     const bordaSelecionadaAnteriormente = document.querySelector('.pratos .bordaVerde');
@@ -35,15 +35,15 @@ function marcaPrato(numPrato){
         checkSelecionadoAnteriormente.classList.remove('checkVerde');
     }
 
-    document.querySelector(`.pratos>div:nth-child(${numPrato})`).classList.add('bordaVerde');
-    document.querySelector(`.pratos>div:nth-child(${numPrato}) ion-icon`).classList.add('checkVerde');
-    nomePrato = document.querySelector(`.pratos div:nth-child(${numPrato}) .nome`).innerHTML;
-    valorPrato = parseFloat((document.querySelector(`.pratos div:nth-child(${numPrato}) span`).innerHTML).replace(",", "."));
+    qualPrato.classList.add('bordaVerde');
+    qualPrato.querySelector('ion-icon').classList.add('checkVerde');
+    nomePrato = qualPrato.querySelector('p').innerHTML;
+    valorPrato = parseFloat((qualPrato.querySelector('span').innerHTML).replace(",", "."));
 
     terminouPedido();
 }
 
-function marcaBebida(numBebida){
+function marcaBebida(qualBebida){
     bebidaSelecionada = true;
 
     const bordaSelecionadaAnteriormente = document.querySelector('.bebidas .bordaVerde');
@@ -54,15 +54,15 @@ function marcaBebida(numBebida){
         checkSelecionadoAnteriormente.classList.remove('checkVerde');
     }
 
-    document.querySelector(`.bebidas>div:nth-child(${numBebida})`).classList.add('bordaVerde');
-    document.querySelector(`.bebidas>div:nth-child(${numBebida}) ion-icon`).classList.add('checkVerde');
-    nomeBebida = document.querySelector(`.bebidas div:nth-child(${numBebida}) .nome`).innerHTML;
-    valorBebida = parseFloat((document.querySelector(`.bebidas div:nth-child(${numBebida}) span`).innerHTML).replace(",", "."));
+    qualBebida.classList.add('bordaVerde');
+    qualBebida.querySelector('ion-icon').classList.add('checkVerde');
+    nomeBebida = qualBebida.querySelector('p').innerHTML;
+    valorBebida = parseFloat((qualBebida.querySelector('span').innerHTML).replace(",", "."));
 
     terminouPedido();
 }
 
-function marcaSobremesa(numSobremesa){
+function marcaSobremesa(qualSobremesa){
     sobremesaSelecionada = true;
 
     const bordaSelecionadaAnteriormente = document.querySelector('.sobremesas .bordaVerde');
@@ -73,10 +73,10 @@ function marcaSobremesa(numSobremesa){
         checkSelecionadoAnteriormente.classList.remove('checkVerde');
     }
 
-    document.querySelector(`.sobremesas>div:nth-child(${numSobremesa})`).classList.add('bordaVerde');
-    document.querySelector(`.sobremesas>div:nth-child(${numSobremesa}) ion-icon`).classList.add('checkVerde');
-    nomeSobremesa = document.querySelector(`.sobremesas div:nth-child(${numSobremesa}) .nome`).innerHTML;
-    valorSobremesa = parseFloat((document.querySelector(`.sobremesas div:nth-child(${numSobremesa}) span`).innerHTML).replace(",", "."));
+    qualSobremesa.classList.add('bordaVerde');
+    qualSobremesa.querySelector('ion-icon').classList.add('checkVerde');
+    nomeSobremesa = qualSobremesa.querySelector('p').innerHTML;
+    valorSobremesa = parseFloat((qualSobremesa.querySelector('span').innerHTML).replace(",", "."));
 
     terminouPedido();
 }
