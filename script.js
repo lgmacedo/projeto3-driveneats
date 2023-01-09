@@ -2,6 +2,8 @@ let pratoSelecionado = false;
 let bebidaSelecionada = false;
 let sobremesaSelecionada = false;
 
+const num2ArredondamentoReais = 2;
+
 let nomePrato = "";
 let nomeBebida = "";
 let nomeSobremesa = "";
@@ -18,9 +20,10 @@ let valorFinalCorrigido = 0;
 
 function terminouPedido(){
     if((pratoSelecionado === true) && (bebidaSelecionada === true) && (sobremesaSelecionada === true)){
-        document.querySelector('footer button').disabled = false;
-        document.querySelector('footer button').classList.add('backgroundVerdeClicavel');
-        document.querySelector('footer button').innerHTML = "<p>Fechar pedido</p>";
+        const foot_button = document.querySelector('footer button')
+        foot_button.disabled = false;
+        foot_button.classList.add('backgroundVerdeClicavel');
+        foot_button.innerHTML = "<p>Fechar pedido</p>";
     }
 }
 
@@ -88,25 +91,32 @@ function fecharPedido(){
     nomeCliente = prompt("Insira o seu nome:");
     endCliente = prompt("Agora, insira seu endereço:");
     valorFinal = valorPrato + valorBebida + valorSobremesa;
-    valorFinalCorrigido = valorFinal.toFixed(2);
+    valorFinalCorrigido = valorFinal.toFixed(num2ArredondamentoReais);
 
     document.querySelector('.item1>p').innerHTML = `${nomePrato}`;
-    valorPrato = valorPrato.toFixed(2);
+    valorPrato = valorPrato.toFixed(num2ArredondamentoReais);
     document.querySelector('.item1 p:nth-child(2)').innerHTML = `R$ ${(valorPrato.toString()).replace(".", ",")}`;
 
     document.querySelector('.item2>p').innerHTML = `${nomeBebida}`;
-    valorBebida = valorBebida.toFixed(2);
+    valorBebida = valorBebida.toFixed(num2ArredondamentoReais);
     document.querySelector('.item2 p:nth-child(2)').innerHTML = `R$ ${(valorBebida.toString()).replace(".", ",")}`;
 
     document.querySelector('.item3>p').innerHTML = `${nomeSobremesa}`;
-    valorSobremesa = valorSobremesa.toFixed(2);
+    valorSobremesa = valorSobremesa.toFixed(num2ArredondamentoReais);
     document.querySelector('.item3 p:nth-child(2)').innerHTML = `R$ ${(valorSobremesa.toString()).replace(".", ",")}`;
 
     document.querySelector('.total p:nth-child(2)').innerHTML = `R$ ${(valorFinalCorrigido.toString()).replace(".", ",")}`;
 }
 
 function fecharPedido2(){
-    const mensagem = `Olá, gostaria de fazer o pedido: \n- Prato: ${nomePrato}\n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${valorFinalCorrigido}\n \nNome: ${nomeCliente}\nEndereço: ${endCliente}`;
+    const mensagem = `Olá, gostaria de fazer o pedido: \n
+                        - Prato: ${nomePrato}\n
+                        - Bebida: ${nomeBebida}\n
+                        - Sobremesa: ${nomeSobremesa}\n
+                        Total: R$ ${valorFinalCorrigido}\n
+                        \n
+                        Nome: ${nomeCliente}\n
+                        Endereço: ${endCliente}`;
     const mensagemCorrigida = encodeURIComponent(mensagem);
     open("https://wa.me/5532999999999?text="+mensagemCorrigida);
 }

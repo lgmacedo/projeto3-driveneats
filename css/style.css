@@ -93,6 +93,11 @@ ion-icon{
     color: transparent;
 }
 
+footer button p{
+    width: 200px;
+    color: #ffffff;
+}
+
 .opcoes div img, .opcoes div p{
     width: 144px;
     margin-left: 14px;
@@ -155,11 +160,6 @@ footer button{
     font-weight: 400;
     font-size: 20px;
     border: none;
-}
-
-footer button p{
-    width: 200px;
-    color: #ffffff;
 }
 
 .bordaVerde{
